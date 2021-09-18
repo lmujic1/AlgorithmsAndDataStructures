@@ -23,7 +23,7 @@ jobs:
         with:
           java-version: 13
       - name: Download and set up sonar-scanner# Shallow clones should be disabled for a better relevancy of analysis
-      env:
+        env:
           SONAR_SCANNER_DOWNLOAD_URL: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${{ env.SONAR_SCANNER_VERSION }}-windows.zip
         run: |
           New-Item -Force -ItemType directory -Path $HOME\.sonar
